@@ -53,6 +53,10 @@ const clientSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  document: {
+    type: Number,
+    required: true,
+  },
 
   email: {
     type: String,
@@ -63,36 +67,36 @@ const clientSchema = mongoose.Schema({
     type: Number,
     required: true,
   },
-  address: {
-    streetName: {
-      type: String,
-      required: true,
-    },
-    number: {
-      type: Number,
-      required: true,
-    },
-    complement: {
-      type: String,
-      required: true,
-    },
-    neighborhood: {
-      type: String,
-      required: true,
-    },
-    postalCode: {
-      type: Number,
-      required: true,
-    },
-    city: {
-      type: String,
-      required: true,
-    },
-    state: {
-      type: String,
-      required: true,
-    },
+
+  streetName: {
+    type: String,
+    required: true,
+  },
+  number: {
+    type: Number,
+    required: true,
+  },
+  complement: {
+    type: String,
+    required: true,
+  },
+  neighborhood: {
+    type: String,
+    required: true,
+  },
+  postalCode: {
+    type: Number,
+    required: true,
+  },
+  city: {
+    type: String,
+    required: true,
+  },
+  state: {
+    type: String,
+    required: true,
   },
 });
 
 export const Products = mongoose.model("Products", productSchema);
+export const Clients = mongoose.model("Clients", clientSchema);
